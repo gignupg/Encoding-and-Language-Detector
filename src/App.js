@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
-const languageEncoding = require("detect-file-encoding-and-language");
+import defaultFileInfo from './defaultFileInfo.js';
+import languageEncoding from 'detect-file-encoding-and-language';
 
 function App() {
   const [file, setFile] = useState(null);
 
-  const [fileInfo, setFileInfo] = useState({
-    language: "",
-    encoding: "",
-    confidence: ""
-  });
+  const [fileInfo, setFileInfo] = useState(defaultFileInfo);
 
   const [textContent, setTextContent] = useState("");
 
