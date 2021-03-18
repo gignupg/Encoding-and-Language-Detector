@@ -20,7 +20,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (fileInfo.language) {
+    if (fileInfo.encoding) {
       const reader = new FileReader();
 
       reader.onload = () => {
