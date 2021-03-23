@@ -58,7 +58,7 @@ function App() {
               <div>
                 <p>Determine the encoding and language of any text file!</p>
                 <ul className="browser-default">
-                  <li>Detects 34 languages as well as the appropriate encoding</li>
+                  <li>Detects 40 languages as well as the appropriate encoding</li>
                   <li>Works best with large inputs</li>
                   <li>Completely free, no API key required</li>
                 </ul>
