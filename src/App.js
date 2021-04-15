@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import defaultFileInfo from './defaultFileInfo.js';
-import languageEncoding from 'detect-file-encoding-and-language';
+import React, { useState, useEffect } from "react";
+import defaultFileInfo from "./defaultFileInfo.js";
+import languageEncoding from "detect-file-encoding-and-language";
 
 function App() {
   const [file, setFile] = useState(null);
@@ -48,23 +48,45 @@ function App() {
             </div>
           </form>
           <div className="col s12 grey lighten-2">
-            <p className="col s4">Language: <span className="blue-text">{fileInfo.language}</span></p>
-            <p className="col s4">Encoding: <span className="blue-text">{fileInfo.encoding}</span></p>
-            <p className="col s4">Confidence: <span className="blue-text">{fileInfo.confidence}</span></p>
+            <p className="col s4">
+              Language: <span className="blue-text">{fileInfo.language}</span>
+            </p>
+            <p className="col s4">
+              Encoding: <span className="blue-text">{fileInfo.encoding}</span>
+            </p>
+            <p className="col s4">
+              Confidence:{" "}
+              <span className="blue-text">{fileInfo.confidence}</span>
+            </p>
           </div>
           <div className="col s12 teal lighten-4 black-text">
             {textContent ? <h5>Content</h5> : <h5>Functionality</h5>}
-            {textContent ? <p>{textContent}</p> :
+            {textContent ? (
+              <p>{textContent}</p>
+            ) : (
               <div>
-                <p>Determine the encoding and language of any text file!</p>
+                <p>Determine the encoding and language of text files!</p>
                 <ul className="browser-default">
-                  <li>Detects 40 languages as well as the appropriate encoding</li>
+                  <li>
+                    Detects 40 languages as well as the appropriate encoding
+                  </li>
+                  <li>Available as CLI, in Node.js and in the browser</li>
+                  <li>Supports .txt, .srt, and .sub</li>
                   <li>Works best with large inputs</li>
                   <li>Completely free, no API key required</li>
                 </ul>
-                <p>For reliable encoding and language detection, use files containing 500 words or more. Smaller inputs can work as well but the results might be less accurate and in some cases incorrect.</p>
-                <p>Feel free to upload your own files and see if the encoding and language are detected correctly!</p>
-              </div>}
+                <p>
+                  For reliable encoding and language detection, use files
+                  containing 500 words or more. Smaller inputs can work as well
+                  but the results might be less accurate and in some cases
+                  incorrect.
+                </p>
+                <p>
+                  Feel free to upload your own files and see if the encoding and
+                  language are detected correctly!
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
